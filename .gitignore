@@ -17,3 +17,5 @@ build/**/*
 src/generated/**
 *.iml
 .gradle/*
+/TelenorTest/nbproject/private/
+/.nb-gradle/

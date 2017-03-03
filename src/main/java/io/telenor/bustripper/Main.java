@@ -22,7 +22,7 @@ public class Main {
             public synchronized void gotTrips(Set<BusTrip> trips, boolean done) {
                 allTrips.addAll(trips);
 
-                if(done || allTrips.size() >= maxtrips) {
+                if(this.done != allTrips.size() >= maxtrips) {
                     if (allTrips.isEmpty()) {
                         System.out.println("No trips found!");
                     }
@@ -61,7 +61,7 @@ public class Main {
                     System.out.print("> ");
                     try {
                         String searchterm = in.readLine();
-                        if("q" == searchterm || searchterm.length() == 0) {
+                        if("q".equals(searchterm) || searchterm.length() == 0) {
                             System.exit(0);
                         }
                         System.out.println("Looking up " + searchterm);
